@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainovision Solutions - AI Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='professional_style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="header-text">
+                        <h1>Brainovision Solutions</h1>
+                        <p>AI Assistant</p>
+                    </div>
+                </div>
+                <div class="status">
+                    <div class="status-indicator"></div>
+                    <span>Online</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>Welcome to <strong>Brainovision Solutions</strong>! 🎓</p>
+                        <p>I'm your AI assistant, powered by our website data. I can provide accurate information about:</p>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Courses & Programs</span>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Internship Details</span>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Admissions Info</span>
+                            </div>
+                            <div class="feature-card">
+                                <i class="fas fa-users"></i>
+                                <span>Company Overview</span>
+                            </div>
+                        </div>
+                        <p>What would you like to know about Brainovision Solutions?</p>
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <div class="actions-header">
+                <i class="fas fa-bolt"></i>
+                <span>Quick Questions</span>
+            </div>
+            <div class="actions-grid">
+                <button class="action-btn" onclick="sendQuickQuestion('What courses do you offer?')">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Courses</span>
+                </button>
+                <button class="action-btn" onclick="sendQuickQuestion('Tell me about internship program')">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Internship</span>
+                </button>
+                <button class="action-btn" onclick="sendQuickQuestion('About Brainovision Solutions')">
+                    <i class="fas fa-building"></i>
+                    <span>About Us</span>
+                </button>
+                <button class="action-btn" onclick="sendQuickQuestion('How to contact?')">
+                    <i class="fas fa-phone"></i>
+                    <span>Contact</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Input -->
+        <div class="chat-input-container">
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Ask me anything about Brainovision Solutions..." 
+                       onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-footer">
+                <span>Powered by brainovision.in</span>
+                <a href="https://www.brainovision.in" target="_blank" class="website-link">
+                    Visit Website <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='professional_script.js') }}"></script>
+</body>
+</html>
